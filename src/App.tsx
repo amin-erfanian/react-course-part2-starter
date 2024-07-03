@@ -1,8 +1,8 @@
 import "./App.css";
 import NavBar from "./state-management/NavBar";
-import TaskList from "./state-management/TaskList";
-import AuthProvider from "./state-management/components/AuthProvider";
-import TasksProvider from "./state-management/components/TasksProvider";
+import TaskList from "./state-management/tasks/TaskList";
+import AuthProvider from "./state-management/auth/AuthProvider";
+import TasksProvider from "./state-management/tasks/TasksProvider";
 
 function App() {
   return (
