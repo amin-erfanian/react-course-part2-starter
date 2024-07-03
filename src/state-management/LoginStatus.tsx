@@ -1,13 +1,13 @@
 import { useContext } from "react";
-import userContext from "./context/userContext";
+import userContext from "./context/AuthContext";
 
 const LoginStatus = () => {
-  const { username, dispatch } = useContext(userContext);
-  if (username)
+  const { user, dispatch } = useContext(userContext);
+  if (user)
     return (
       <>
         <div>
-          <span className="mx-2">{username}</span>
+          <span className="mx-2">{user}</span>
           <a onClick={() => dispatch({ type: "LOGOUT" })} href="#">
             Logout
           </a>
@@ -17,7 +17,7 @@ const LoginStatus = () => {
   return (
     <div>
       <a
-        onClick={() => dispatch({ type: "LOGIN", username: "amin.erfanian" })}
+        onClick={() => dispatch({ type: "LOGIN", user: "amin.erfanian" })}
         href="#"
       >
         Login
